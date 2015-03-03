@@ -1,0 +1,96 @@
+.page-content table {
+	margin-left: 180px;
+}
+
+.page-content tr {
+	margin: 0;
+	background-color: #F4F4F4;
+	font-size: 2.4rem;
+	font-weight: normal;
+}
+
+
+#gmail {
+	margin: 0;
+	width: 40px;
+	height: 38px;
+	display: block;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	float: left;
+	top: 0;
+	left: 0;
+	background-image: url("contact/gmail.png");
+	background-size: auto 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#facebook {
+	margin: 0;
+	width: 40px;
+	height: 38px;
+	display: block;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	float: left;
+	top: 0;
+	left: 0;
+	background-image: url("contact/facebook.png");
+	background-size: auto 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#SkypeButton_Call {
+	margin: 0 auto;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	background: url(contact/skype.png);
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center;
+	width: 40px;
+	height: 38px;
+	display: block;
+	line-height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	float: left;
+}
+
+#SkypeButton_Call p{
+	margin: 0 auto!important;
+	padding: 0;
+	text-indent: 0;
+	display: block;
+	line-height: 100% !important;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	color: transparent;
+}
+
+#SkypeButton_Call a{
+	margin: 0 !important;
+	padding: 0;
+	width: 100px;
+	height: 38px;
+	text-indent: 0;
+	display: block;
+	line-height: 100% !important;
+	text-align: center;
+	vertical-align: middle !important;
+	position: relative;
+	float: left;
+}
+
+#SkypeButton_Call img{
+	padding-left: 100px;
+}

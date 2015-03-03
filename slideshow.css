@@ -1,0 +1,186 @@
+#show {
+	width: 842px;
+	height: 519px;
+	display: block;
+	position: relative;
+	margin: auto;
+	background-color: #E6E6E6;
+}
+
+#slider {
+	width: 842px;
+	height: 519px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+}
+
+.items {
+	width: 842px;
+	height: 519px;
+	background-color: transparent !important;
+}
+
+.info {
+	width: 842px;
+	height: 80px;
+	display: block;
+	margin: 0;
+	position: relative;
+	bottom: 0;
+	background-color: transparent;
+	border-top: 3px solid #577EBF;
+	z-index: 99;
+}
+
+.info h2 {
+	font-family: "Droid Sans",Arial,Helvetica,sans-serif;
+    font-size: 20px;
+	font-weight: bold;
+	color: #577EBF;
+	margin: 0;
+	padding: 5px 0 0 20px;
+}
+
+.info p {
+	font-family: "Droid Sans",Arial,Helvetica,sans-serif;
+    font-size: 15px;
+	font-weight: lighter;
+	color: #666;
+	padding: 0 0 0 20px;
+	line-height: 1px;
+	text-indent: 0;
+	margin-top: 10px;
+}
+
+#play {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	right: 41px;
+	bottom: 0;
+	background: #577EBF;
+	color: #FFF;
+	cursor: pointer;
+	z-index: 999;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+}
+
+#play:hover {
+	background: transparent;
+	color: #577EBF;
+}
+
+#pause {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	right: 82px;
+	bottom: 0;
+	background: #577EBF;
+	color: #FFF;
+	cursor: pointer;
+	z-index: 999;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+}
+
+#pause:hover {
+	background: transparent;
+	color: #577EBF;
+}
+
+#next {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #577EBF;
+	color: #FFF;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#next:hover {
+	background: transparent;
+	color: #577EBF;
+}
+
+#prev {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	right: 123px;
+	bottom: 0;
+	background: #577EBF;
+	color: #FFF;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#prev:hover {
+	background: transparent;
+	color: #577EBF;
+}
+
+#slcontact {
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	position: absolute;
+	right: 174px;
+	bottom: 0;
+	text-decoration:none;
+	color: #FFF;
+	background: #577EBF;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#slcontact:hover {
+	color: #577EBF;
+	background: transparent;
+}
+
+#pager {
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	bottom: 38px;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#pager a {
+	font-size: .0em;
+	color: transparent;
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	position: relative;
+	border: 2px solid #577EBF;
+	border-radius: 20px;
+	background: transparent;
+	margin: 10px;
+}
+
+#pager a.activeSlide {
+	background: #577EBF;
+	
+}
