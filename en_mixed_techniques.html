@@ -16,50 +16,62 @@
 
 <body>
 
-<div class="container">
-  <div class="header">
-	<div class="header-search-wrapper">
-		<div class="header-search">
-				<form role="search" method="get" class="search-form" action="https://felipebiox.com.br/">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input class="search-field" placeholder="Search …" value="" name="s" title="Search for:" type="search">
-		</label>
-		<span class="search-button"><input class="search-submit" value="Search" type="submit"></span>
-</form>
-			
+<div class="header">
+<div class="header_stars">
+</div>
+	<div class="bush">
+	</div>
+	<div class="header-wrap">
+		<h1>Felipe Biox</h1>
+		<h3>A work in progress portfolio.</h3>
+		<div class="site-branding">
+		</div>
+		<ul class="about">
+			<li><a href="en_about.html"></a></li>
+		</ul>
+		<div class="top-menu">
+			<ul class="nav">
+			<li id="two-lines"><a href="en_animated_2d.html">Animated 2D</a></li><!--
+-----------><li id="two-lines"><a href="en_digital_painting.html">Digital Painting</a></li><!--
+-----------><li id="two-lines"><a href="en_mixed_techniques.html">Mixed Techniques</a></li>
+			</ul>
+			<ul class="nav">
+			<li><a href="en_collabs.html">Collabs</a></li><!--
+-----------><li><a href="en_editorial.html">Editorial</a></li><!--
+-----------><li><a href="en_glyphs.html">Glyphs</a></li><!--
+-----------><li><a href="en_contact.html">Contact</a></li>
+			</ul>
 		</div>
 	</div>
-	<div class="site-branding">
-		<h1 class="site-title">Felipe Biox</h1>
-		<h2 class="site-description">A work in progress portfolio</h2>
-	</div>
-  
-  </div>
-  
+	
+</div>
+
+
+<div class="container">
+
+
+	  <div class="top-elements">
+		  <a id="button1" href="#">MENU</a>
+		  
+		  <script>
+			$( "#button1" ).click(function() {
+			  $( ".header" ).animate({
+				height: "toggle"
+			  }, 1000 );
+			});
+		  </script>
+
+		  <h1 class="page-title">Mixed Techniques</h1>
+	  </div>
+
 
   <div class=content>
-	<div class="sidebar-menu">
-		<h1 class="sidebar-menu-title">Menu</h1>
-		<ul class="nav">
-		<li><a href="index.html">About</a></li>
-		<li><a href="animated 2d.html">Animated 2D</a></li>
-		<li><a href="collabs.html">Collabs</a></li>
-		<li><a href="digital painting.html">Digital Painting</a></li>
-		<li><a href="mixed techniques.html">Mixed Techniques</a></li>
-		<li><a href="editorial.html">Editorial</a></li>
-		<li><a href="glyphs.html">Glyphs</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</div>
   
 	<div class="page-content-wrapper">
 		<div class="page-content">
-			<h1 class="page-title">Mixed Techniques</h1>
 			<div class="page-content-inner">
-			<p style="margin:0;"> Esta sessão inclui ilustrações feitas em diferentes técnicas, tais como: grafite, aquarela, guache e acrílica.</p>
-			<p id="p-en"><em>This section includes illustrations made with different techniques, such as: graphite, watercolors, gouache and acrylic.</p>
-			
+			<p style="margin:0;">This section includes illustrations made with different techniques, such as: graphite, watercolors, gouache and acrylic.</p>
+			<br>
 			<div id="show">
 
 					<div id="pager"></div>
@@ -67,12 +79,11 @@
 					<div id="play">&Delta;</div>
 					<div id="next">></div>
 					<div id="prev"><</div>
-					<div id="slcontact" onclick="window.open('contact.html')">CONTACT</div>
 
 					<div id="slider">
 					
 						<div class="items">
-							<img src="mixed techniques/adorno.png">
+							<img src="mixed_techniques/adorno.png">
 							<div class="info">
 								<h2>Theodor W. Adorno</h2>
 								<p>He was a great philosopher and still is a very interesting subject. </p>
@@ -80,7 +91,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/baby.png">
+							<img src="mixed_techniques/baby.png">
 							<div class="info">
 								<h2>Baby</h2>
 								<p>A baby plays among water bubbles. </p>
@@ -88,7 +99,7 @@
 						</div><!--End--items-->
 
 						<div class="items">
-							<img src="mixed techniques/monkeys.png">
+							<img src="mixed_techniques/monkeys.png">
 							<div class="info">
 								<h2>Snow Monkeys</h2>
 								<p>A family of monkeys confort the young monkey staring at the frozen lake. </p>
@@ -96,7 +107,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/monkey.png">
+							<img src="mixed_techniques/monkey.png">
 							<div class="info">
 								<h2>The Thinking Monkey</h2>
 								<p>To monkey or not.</p>
@@ -104,7 +115,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/comfy-artist.png">
+							<img src="mixed_techniques/comfy-artist.png">
 							<div class="info">
 								<h2>A Comfy Artist</h2>
 								<p>Sometimes the scarf gets in the way. </p>
@@ -112,7 +123,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/head.png">
+							<img src="mixed_techniques/head.png">
 							<div class="info">
 								<h2>The Head</h2>
 								<p>It's a big expressive head! </p>
@@ -120,7 +131,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/symbol.png">
+							<img src="mixed_techniques/symbol.png">
 							<div class="info">
 								<h2>Tanith Symbol</h2>
 								<p>Only a few stood against this symbol and lived to tell their stories. </p>
@@ -128,7 +139,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/commissar.png">
+							<img src="mixed_techniques/commissar.png">
 							<div class="info">
 								<h2>The Commissar</h2>
 								<p>He shouts orders and charges for the emperor. </p>
@@ -136,7 +147,7 @@
 						</div><!--End--items-->
 						
 						<div class="items">
-							<img src="mixed techniques/banner.png">
+							<img src="mixed_techniques/banner.png">
 							<div class="info">
 								<h2>The Banner</h2>
 								<p>It flies among smoke and ruins. </p>
@@ -148,13 +159,19 @@
 				</div><!--End--show-->
 			
 			<hr></hr>
-			<p style="text-align:center;">Luis Felipe Thofehrn Castro</p>
+			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
 			</div>
 		</div>
 	</div>
   </div>
   
 </div>
+
+<footer>
+	<h6>Felipe Biox. All rights reserved.</h6>
+	<a id="fl_us" href="en_mixed_techniques.html"></a>
+	<a id="fl_br" href="pt_tecnicas_mistas.html"></a>
+</footer>
 
 </body>
 </html>

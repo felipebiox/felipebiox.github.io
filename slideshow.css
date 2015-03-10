@@ -137,27 +137,6 @@
 	color: #577EBF;
 }
 
-#slcontact {
-	width: 120px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	display: block;
-	position: absolute;
-	right: 174px;
-	bottom: 0;
-	text-decoration:none;
-	color: #FFF;
-	background: #577EBF;
-	cursor: pointer;
-	z-index: 999;
-}
-
-#slcontact:hover {
-	color: #577EBF;
-	background: transparent;
-}
-
 #pager {
 	width: 100%;
 	text-align: right;

@@ -7,51 +7,62 @@
 <meta charset="utf-8">
 <title>BIOX - Editorial</title>
 <link rel="stylesheet" type="text/css" href="felipebiox.css">
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
 
 </head>
 
 <body>
 
-<div class="container">
-  <div class="header">
-	<div class="header-search-wrapper">
-		<div class="header-search">
-				<form role="search" method="get" class="search-form" action="https://felipebiox.com.br/">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input class="search-field" placeholder="Search …" value="" name="s" title="Search for:" type="search">
-		</label>
-		<span class="search-button"><input class="search-submit" value="Search" type="submit"></span>
-</form>
-			
+<div class="header">
+<div class="header_stars">
+</div>
+	<div class="bush">
+	</div>
+	<div class="header-wrap">
+		<h1>Felipe Biox</h1>
+		<h3>Um portfolio em construção.</h3>
+		<div class="site-branding">
+		</div>
+		<ul class="about">
+			<li><a href="pt_sobre.html"></a></li>
+		</ul>
+		<div class="top-menu">
+			<ul class="nav">
+			<li id="two-lines"><a href="pt_2d_animado.html">2D Animado</a></li><!--
+-----------><li id="two-lines"><a href="pt_pintura_digital.html">Pintura Digital</a></li><!--
+-----------><li id="two-lines"><a href="pt_tecnicas_mistas.html">Técnicas Mistas</a></li>
+			</ul>
+			<ul class="nav">
+			<li><a href="pt_colaboracoes.html">Colaborações</a></li><!--
+-----------><li><a href="pt_editorial.html">Editorial</a></li><!--
+-----------><li><a href="pt_glifos.html">Glifos</a></li><!--
+-----------><li><a href="pt_contato.html">Contato</a></li>
+			</ul>
 		</div>
 	</div>
-	<div class="site-branding">
-		<h1 class="site-title">Felipe Biox</h1>
-		<h2 class="site-description">A work in progress portfolio</h2>
-	</div>
-  
-  </div>
-  
+	
+</div>
 
-  <div class=content>
-	<div class="sidebar-menu">
-		<h1 class="sidebar-menu-title">Menu</h1>
-		<ul class="nav">
-		<li><a href="index.html">About</a></li>
-		<li><a href="animated 2d.html">Animated 2D</a></li>
-		<li><a href="collabs.html">Collabs</a></li>
-		<li><a href="digital painting.html">Digital Painting</a></li>
-		<li><a href="mixed techniques.html">Mixed Techniques</a></li>
-		<li><a href="editorial.html">Editorial</a></li>
-		<li><a href="glyphs.html">Glyphs</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		</ul>
-	</div>
+<div class="container">
+
+
+	  <div class="top-elements">
+		  <a id="button1" href="#">MENU</a>
+		  
+		  <script>
+			$( "#button1" ).click(function() {
+			  $( ".header" ).animate({
+				height: "toggle"
+			  }, 1000 );
+			});
+		  </script>
+
+		  <h1 class="page-title">Editorial</h1>
+	  </div>
   
+  <div class=content>
 	<div class="page-content-wrapper">
 		<div class="page-content">
-			<h1 class="page-title">Editorial</h1>
 			<div class="page-content-inner">
 			<h3 style="text-align:justify; margin:0;">Maquiavel - O Príncipe</h3>
 			<p>Este é o projeto editorial que desenvolvi para um trabalho conceitual. Trata-se do livro “O Príncipe”, de Maquiavel.</p>
@@ -84,13 +95,19 @@
 			<img src="editorial/res4.jpg" style="margin:1em 1.5em 1em 1.5em;">
 			<img src="editorial/res5.jpg" style="margin:1em 1.5em 1em 1.5em;">
 			<hr></hr>
-			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</p>
+			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
 			</div>
 		</div>
 	</div>
   </div>
   
 </div>
+
+<footer>
+	<h6>Felipe Biox. Todos os direitos reservados.</h6>
+	<a id="fl_us" href="en_editorial.html"></a>
+	<a id="fl_br" href="pt_editorial.html"></a>
+</footer>
 
 </body>
 </html>
