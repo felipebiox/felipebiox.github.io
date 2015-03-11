@@ -242,9 +242,9 @@ font-weight: bold;
 
 #button1 {
 	margin: 0;
-	width: 140px;
-	height: 30px;
-	line-height: 30px;
+	width: 39px;
+	height: 33px;
+	line-height: 33px;
 	display: block;
 	position: absolute;
 	left: 0;
@@ -254,12 +254,12 @@ font-weight: bold;
 	text-decoration: none;
 	background-image: url("header/dropdown.png");
 	background-repeat: no-repeat;
-	background-position: 108px;
+	background-position: 2px;
 	background-color: #485b78;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
-	border-width: 0 0 0 3px;
+	border-width: 0 3px 3px 3px;
 	border-style: solid;
 	border-color: rgba(0, 0, 0, 0.1);
 }
@@ -270,13 +270,13 @@ font-weight: bold;
 
 .page-title {
 	margin: 0;
-	width: 982px;
-	height: 30px;
-	line-height: 30px;
+	width: 1083px;
+	height: 33px;
+	line-height: 33px;
 	position: absolute;
 	display: block;
-	left: 140px;
-	background-color: #577ebf;
+	left: 39px;
+	background-color: #485b78;
 	color: #FFF;
 	font-size: 2.4rem;
 	font-weight: normal;
@@ -284,7 +284,7 @@ font-weight: bold;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
-	border-width: 0 3px 0 0;
+	border-width: 0 3px 3px 0;
 	border-style: solid;
 	border-color: rgba(0, 0, 0, 0.1);
 }
