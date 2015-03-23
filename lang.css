@@ -37,6 +37,18 @@ h6 {
 	font-weight: bold;
 }
 
+#motor_index {
+	margin: 0;
+	width: 300px;
+	height: 195px;
+	position: relative;
+	display: block;
+	top: -20px;
+	left: 320px;
+	background-image: url("header/motor_pah_anm_small.gif");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
 
 .lang {
 	margin: 0;
