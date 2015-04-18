@@ -55,11 +55,30 @@ font-size: 0.67em;
 font-weight: bold;
 }
 
+.navbar_wrap {
+	margin: 0 auto;
+	width: 100%;
+	height: 120px;
+	position: absolute;
+	text-align: center;
+	z-index: 9999;
+}
+
+.navbar {
+	margin: 0 auto;
+	width: 83.33%;
+	max-width: 1122px;
+	height: 120px;
+	position: relative;
+	display: block;
+	overflow: visible;
+	z-index: 99;
+}
 
 .header {
 	margin: 0 auto;
 	width: 100%;
-	height: 156px;
+	height: 120px;
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -73,6 +92,7 @@ font-weight: bold;
 	border-width: 0 0 2px 0;
 	border-style: solid;
 	border-color: #000;
+	z-index: 9;
 }
 
 .header_stars {
@@ -98,11 +118,12 @@ font-weight: bold;
 	height: 195px;
 	position: relative;
 	display: block;
-	top: -20px;
-	left: 1122px;
+	top: -50px;
+	left: 310px;
 	background-image: url("header/motor_pah_anm_small.gif");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	z-index: 9;
 }
 
 .bush {
@@ -115,13 +136,15 @@ font-weight: bold;
 	background-image: url("header/bush_animated.gif");
 	background-repeat: repeat-x;
 	background-position: bottom;
-	z-index: 999;
+	z-index: 99;
 }
 
 .header-wrap {
 	margin: 0 auto;
-	width: 1122px;
-	height: 165px;
+	width: 83.33%;
+	height: 120px;
+	position: relative;
+	z-index: 999;
 }
 
 .header-wrap h1, .header-wrap h3 {
@@ -131,13 +154,13 @@ font-weight: bold;
 .site-branding {
 	margin: 0 auto;
 	padding: 0;
-	width: 280px;
+	width: 310px;
 	height: 165px;
 	position: absolute;
 	bottom: 0;
 	background-image: url("header/run.gif");
 	background-repeat: no-repeat;
-	background-position: 178px bottom;
+	background-position: 200px bottom;
 	background-size: auto 100px;
 }
 
@@ -191,13 +214,17 @@ font-weight: bold;
 }
 
 .top-menu {
-	margin: 0 0 0 280px;
-	float: left;
-	position: relative;
+	margin: 0;
 	line-height: 71px;
+	float: right;
+	position: relative;
 	vertical-align: middle;
-	width: 842px;
+	width: 300px;
+	height: 0px;
+	overflow: hidden;
+	top: 119px;
 	font-size: 2rem;
+	z-index: 999;
 }
 
 .top-menu ul{
@@ -207,19 +234,17 @@ font-weight: bold;
 	list-style: outside none none;
 	padding-left: 0;
 	font-family: inherit;
+	z-index: 999;
 }
 
 .top-menu ul li{
-	width: 25%;
+	width: 100%;
 	height: 71px;
 	line-height: 71px;
 	vertical-align: middle;
 	display: inline-block;
-}
-
-#two-lines {
-	width: 33.33%;
-	border-width: 0 2px 2px 2px;
+	z-index: 999;
+	background-color: rgb(0, 0, 0);
 }
 
 .top-menu a{
@@ -234,18 +259,17 @@ font-weight: bold;
 
 .top-menu a:hover, a:active, a:focus {
 	color: #dfdfdf;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: #485b78;
 }
 
 
 
 .container {
 	margin: 0 auto;
-	width: 1122px;
-	height: calc(100% - 175px);
+	width: 83.33%;
+	max-width: 1122px;
 	position: relative;
 	display: block;
-	overflow: auto;
 	background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -259,26 +283,28 @@ font-weight: bold;
 
 #button1 {
 	margin: 0;
-	width: 39px;
-	height: 33px;
-	line-height: 33px;
+	width: 20%;
+	height: 71px;
+	line-height: 71px;
 	display: block;
 	position: absolute;
-	left: 0;
-	text-indent: 30px;
+	right: 0;
+	bottom: 0;
+	text-indent: 110px;
+	overflow: hidden;
 	font-weight: bold;
 	color: #FFF;
 	text-decoration: none;
 	background-image: url("header/dropdown.png");
 	background-repeat: no-repeat;
-	background-position: 2px;
+	background-position: 20px;
 	background-color: #485b78;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
-	border-width: 0 3px 3px 3px;
+	border-width: 3px 3px 2px 3px;
 	border-style: solid;
-	border-color: rgba(0, 0, 0, 0.1);
+	border-color: rgba(0, 0, 0, 1);
 }
 
 #button1:hover {
@@ -287,12 +313,12 @@ font-weight: bold;
 
 .page-title {
 	margin: 0;
-	width: 1083px;
+	width: 100%;
 	height: 33px;
 	line-height: 33px;
 	position: absolute;
 	display: block;
-	left: 39px;
+	left: 0px;
 	background-color: #485b78;
 	color: #FFF;
 	font-size: 2.4rem;
@@ -308,7 +334,7 @@ font-weight: bold;
 
 .content {
 	margin: 0;
-	width: 1122px;
+	width: 100%;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
@@ -375,7 +401,7 @@ footer {
 	height: 20px;
 	line-height: 20px;
 	display: block;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	text-align: center;
 	background-color: rgb(0, 0, 0);

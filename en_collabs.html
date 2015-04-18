@@ -18,15 +18,57 @@ $(document).ready(function ($) {
 	$(".container").perfectScrollbar();
 });
 
+var menuState = 1;
+
 </script>
 
 </head>
 
 <body>
 
-<div class="header">
-<div class="header_stars">
+<div class="navbar_wrap">
+<div class="navbar">
+		
+		<a id="button1" href="#" onclick="menuToggle()">MENU</a>
+		  
+		  <script>
+		  
+			function menuToggle() {
+				var menuTB = $(".top-menu");
+				if (menuState==1) {
+					menuState = 2;
+					menuTB.animate({
+						height: "+=575px"
+					}, 1000 );
+				}
+				else {
+					menuState = 1;
+					menuTB.animate({
+						height: "-=575px"
+					}, 1000 );
+				}
+			}
+			
+		  </script>
+		  
+		<div class="top-menu">
+			<ul class="nav">
+			<li><a href="en_about.html">About</a></li><!--
+-----------><li><a href="en_animated_2d.html">Animated 2D</a></li><!--
+-----------><li><a href="en_digital_painting.html">Digital Painting</a></li><!--
+-----------><li><a href="en_mixed_techniques.html">Mixed Techniques</a></li><!--
+-----------><li><a href="en_collabs.html">Collabs</a></li><!--
+-----------><li><a href="en_editorial.html">Editorial</a></li><!--
+-----------><li><a href="en_glyphs.html">Glyphs</a></li><!--
+-----------><li><a href="en_contact.html">Contact</a></li>
+			</ul>
+		</div>
 </div>
+</div>
+
+<div class="header">
+	<div class="header_stars">
+	</div>
 	<div class="bush">
 	</div>
 	<div class="header-wrap">
@@ -34,47 +76,22 @@ $(document).ready(function ($) {
 		<h3>A work in progress portfolio.</h3>
 		<div class="site-branding">
 		</div>
-		<ul class="about">
-			<li><a href="en_about.html"></a></li>
-		</ul>
-		<div class="top-menu">
-			<ul class="nav">
-			<li id="two-lines"><a href="en_animated_2d.html">Animated 2D</a></li><!--
------------><li id="two-lines"><a href="en_digital_painting.html">Digital Painting</a></li><!--
------------><li id="two-lines"><a href="en_mixed_techniques.html">Mixed Techniques</a></li>
-			</ul>
-			<ul class="nav">
-			<li><a href="en_collabs.html">Collabs</a></li><!--
------------><li><a href="en_editorial.html">Editorial</a></li><!--
------------><li><a href="en_glyphs.html">Glyphs</a></li><!--
------------><li><a href="en_contact.html">Contact</a></li>
-			</ul>
-		</div>
+		
 		<div id="motor"></div>
 	</div>
-	
+
 </div>
-  
 
 <div class="container">
 
 
 	  <div class="top-elements">
-		  <a id="button1" href="#"></a>
 		  
-		  <script>
-			$( "#button1" ).click(function() {
-			  $( ".header" ).animate({
-				height: "toggle"
-			  }, 1000 );
-			});
-		  </script>
-
 		  <h1 class="page-title">Collabs</h1>
 	  </div>
 
 
-  <div class=content>
+  <div class="content">
 	<div class="page-content-wrapper">
 		<div class="page-content">
 			<div class="page-content-inner">
