@@ -75,6 +75,25 @@ font-weight: bold;
 	z-index: 99;
 }
 
+.out-clicker {
+	margin: 0;
+	width: 0;
+	height: 0;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	z-index: 9995;
+}
+
+#outClicker {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	position: relative;
+	display: block;
+}
+
 .header {
 	margin: 0 auto;
 	width: 100%;
