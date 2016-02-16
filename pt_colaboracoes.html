@@ -3,147 +3,164 @@
 <html>
 
 <head>
-<title>BIOX - Collabs</title>
 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOX - Colaborações</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/felipebiox.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="felipebiox.css">
-<link rel="stylesheet" type="text/css" href="perfect-scrollbar/css/perfect-scrollbar.css"/>
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
-
-<script>
-
-$(document).ready(function ($) {
-	$("body").perfectScrollbar();
-	$(".container").perfectScrollbar();
-});
-
-var menuState = 1;
-
-</script>
+	<script>
+		var menuState = 1;
+	</script>
 
 </head>
 
-<body>
+<body style="background-color:transparent;">
 
-<div class="navbar_wrap">
-<div class="navbar">
-		
-		<a id="button1" href="#" onclick="menuToggle()">MENU</a>
-		  
-		  <script>
-		  
-			function menuToggle() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==1) {
-					menuState = 2;
-					menuTB.animate({
-						height: "+=650px"
-					}, 1000 );
-					outclicker.animate({
-						width: "100%",
-						height: "100%"
-					}, 1000 );
-				}
-				else {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=650px"
-					}, 1000 );
-				}
-			}
-			
-		  </script>
-		  
-		<div class="top-menu">
-			<ul class="nav">
-			<li><a href="pt_sobre.html">Sobre</a></li><!--
------------><li><a href="pt_2d_animado.html">2D Animado</a></li><!--
------------><li><a href="pt_pintura_digital.html">Pintura Digital</a></li><!--
------------><li><a href="pt_tecnicas_mistas.html">Técnicas Mistas</a></li><!--
------------><li><a href="pt_colaboracoes.html">Colaborações</a></li><!--
------------><li><a href="pt_editorial.html">Editorial</a></li><!--
------------><li><a href="pt_dg_diversos.html">Design Gráfico</a></li><!--
------------><li><a href="pt_glifos.html">Glifos</a></li><!--
------------><li><a href="pt_contato.html">Contato</a></li>
-			</ul>
+<div class="row">
+	<div class="navbar_wrap">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10 navbar">
+				
+				<a id="button1" href="#" onclick="menuToggle()">MENU</a>
+				  
+				  <script>
+				  
+					function menuToggle() {
+						var menuTB = $(".top-menu");
+						var outclicker = $(".out-clicker");
+						if (menuState==1) {
+							menuTB.animate({
+								height: "+=650px"
+							}, 1000 );
+							outclicker.animate({
+								width: "100%",
+								height: "100%"
+							}, 1000 );
+							menuState = 2;
+						}
+						else {
+							menuTB.animate({
+								height: "-=650px"
+							}, 1000 );
+							menuState = 1;
+						}
+					}
+					
+				  </script>
+				  
+				<div class="top-menu">
+					<ul class="nav">
+					<li><a href="pt_sobre.html">Sobre</a></li><!--
+-------------------><li><a href="pt_2d_animado.html">2D Animado</a></li><!--
+-------------------><li><a href="pt_pintura_digital.html">Pintura Digital</a></li><!--
+-------------------><li><a href="pt_tecnicas_mistas.html">Técnicas Mistas</a></li><!--
+-------------------><li><a href="pt_colaboracoes.html">Colaborações</a></li><!--
+-------------------><li><a href="pt_editorial.html">Editorial</a></li><!--
+-------------------><li><a href="pt_dg_diversos.html">Design Gráfico</a></li><!--
+-------------------><li><a href="pt_glifos.html">Glifos</a></li><!--
+-------------------><li><a href="pt_contato.html">Contato</a></li>
+					</ul>
+				</div>
 		</div>
-</div>
-</div>
+		<div class="col-xs-1"></div>
+	</div>
 
-<div class="out-clicker">
-	<a id="outClicker" href="#" onclick="menuOff()"></a>
-		  
-		  <script>
-		  
-			function menuOff() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==2) {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=575px"
-					}, 1000 );
-					outclicker.animate({
-						width: "0",
-						height: "0"
-					}, 0 );
+	<div class="out-clicker">
+		<a id="outClicker" href="#" onclick="menuOff()"></a>
+			  
+			  <script>
+			  
+				function menuOff() {
+					var menuTB = $(".top-menu");
+					var outclicker = $(".out-clicker");
+					if (menuState==2) {
+						menuState = 1;
+						menuTB.animate({
+							height: "-=650px"
+						}, 1000 );
+						outclicker.animate({
+							width: "0",
+							height: "0"
+						}, 0 );
+					}
 				}
-			}
-			
-		  </script>
-</div>
+				
+			  </script>
+	</div>
 
-<div class="header">
-	<div class="header_stars">
-	</div>
-	<div class="bush">
-	</div>
-	<div class="header-wrap">
-		<h1>Felipe Biox</h1>
-		<h3>A work in progress portfolio.</h3>
-		<div class="site-branding">
+	<div id="header" class="row">
+		<div class="header_stars">
+			<div class="stars_cover"></div>
 		</div>
 		
-		<div id="motor"></div>
-	</div>
+		<div class="bush"></div>
+		
+		<div id="header-wrap" class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10 header-wrap">
+				<h1>Felipe Biox</h1>
+					
+				<h3>Um Portfolio em Desenvolvimento</h3>
+					
+				<div class="site-branding"></div>
+					
+				<div id="motor"></div>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
 
+	</div>
 </div>
 
-<div class="container">
-
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div id="container" class="col-xs-10">
 
 	  <div class="top-elements">
-
+		  
 		  <h1 class="page-title">Colaborações</h1>
 	  </div>
 
 
-  <div class="content">
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<div class="page-content-inner">
-			<h3 style="text-align:justify; margin:0;">Abaixo está disponível o demo do jogo educativo que elaborei na Editora Fama. Por enquanto, este é o único que está disponível para o público externo.</h3>
-			<hr></hr>
-			<img src="collabs/melissa.gif" style="float:left; display:inline; margin:1em 1.5em 0.75em 0;">
-			<h4>"Melissa Contra o Tempo" - <span style="text-decoration:underline;"><strong><a title="Editora Fama - Melissa" href="http://www.famaeducativa.com.br/jogos" target="_blank">jogue aqui</a></strong></span>.</h4>
-			<p>Este aplicativo trata-se de um jogo educativo destinado a crianças. Nele, a personagem Melissa tem que entregar sorvetes para os seus amigos, antes que eles derretam.</p>
-			<p>Para isso, o jogador deve levá-la a percorrer por um cenário urbano cheio de obstáculos. Sempre respeitando as faixas de pedestres, ela deve percorrer o labirinto criado até achar o destino específico,  antes que o tempo se esgote.</p>
-			<hr></hr>
-			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+	  <div class="content">
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-content-inner">
+				<h3 style="text-align:justify; margin:0;">Abaixo está disponível o demo do jogo educativo que elaborei na Editora Fama. Por enquanto, este é o único que está disponível para o público externo.</h3>
+				<hr></hr>
+				<img src="imgs/collabs/melissa.gif" style="float:left; display:inline; margin:1em 1.5em 0.75em 0;">
+				<h4>"Melissa Contra o Tempo" - <span style="text-decoration:underline;"><strong><a title="Editora Fama - Melissa" href="http://www.famaeducativa.com.br/jogos" target="_blank">jogue aqui</a></strong></span>.</h4>
+				<p>Este aplicativo trata-se de um jogo educativo destinado a crianças. Nele, a personagem Melissa tem que entregar sorvetes para os seus amigos, antes que eles derretam.</p>
+				<p>Para isso, o jogador deve levá-la a percorrer por um cenário urbano cheio de obstáculos. Sempre respeitando as faixas de pedestres, ela deve percorrer o labirinto criado até achar o destino específico,  antes que o tempo se esgote.</p>
+				<hr></hr>
+				<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+				</div>
 			</div>
 		</div>
+	  </div>
 	</div>
-  </div>
-  
+	<div class="col-xs-1"></div>
 </div>
 
-<footer>
-	<h6>Felipe Biox. Todos os direitos reservados.</h6>
-	<a id="fl_us" href="en_collabs.html"></a>
-	<a id="fl_br" href="pt_colaboracoes.html"></a>
-</footer>
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-10" style="padding:0;">
+		<footer>
+			<h6>Felipe Biox. Todos os direitos reservados.</h6>
+			<a id="fl_us" href="en_about.html"></a>
+			<a id="fl_br" href="pt_sobre.html"></a>
+		</footer>
+	</div>
+	<div class="col-xs-1"></div>
+</div>
 
 </body>
 </html>

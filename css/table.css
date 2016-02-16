@@ -38,7 +38,7 @@ h5 {
 }
 
 .thumb_table {
-	margin: 0;
+	margin: 0 auto;
 	max-width: 900px;
 	text-align: center;
 	list-style: outside none none;
@@ -78,7 +78,7 @@ h5 {
 }
 
 .thumb_table a:hover, .thumb_table a:active, .thumb_table a:focus {
-	color: rgba(0, 0, 0, 0.4);
+	color: rgba(0, 0, 0, 1);
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -88,7 +88,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/kid_jump_test4.gif");
+	background-image: url("../imgs/about/kid_jump_test4.gif");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: auto 100%;
@@ -100,7 +100,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/ships.png");
+	background-image: url("../imgs/about/ships.png");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: auto 100%;
@@ -112,7 +112,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/mel_interface.png");
+	background-image: url("../imgs/about/mel_interface.png");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: auto 100%;
@@ -124,7 +124,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/web.png");
+	background-image: url("../imgs/about/web.png");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: auto 100%;
@@ -136,7 +136,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/ilust_1.png");
+	background-image: url("../imgs/about/ilust_1.png");
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	background-size: auto 100%;
@@ -148,7 +148,7 @@ h5 {
 	position: relative;
 	display: block;
 	background-color: #FFF;
-	background-image: url("about/edit.png");
+	background-image: url("../imgs/about/edit.png");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: auto 100%;

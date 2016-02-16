@@ -16,6 +16,7 @@ var Skype = new function () {
 		this.protocol = "skype:";
 		this.version = "1.1.7";
 		this.httpProtocol = window.location.protocol !== "https:" ? "http:" : "https:";
+		this.assetsDomain = this.httpProtocol + "//" + (this.httpProtocol !== "https:" ? "www.skypeassets.com" : "secure.skypeassets.com");
 		this.ui = l;
 		this.setImageAttributes = j;
 		this.trimString = o;
@@ -23,6 +24,7 @@ var Skype = new function () {
 		this.createDetectionFrame = h;
 		this.trySkypeUri_IE9_IE8 = n;
 		this.trySkypeUri_IOS_Safari = e;
+		this.trySkypeUri_Android_Chrome = a_androidchrome;
 		this.trySkypeUri_Android_Firefox = q;
 		this.trySkypeUri_Generic = a;
 		this.SkypeClientDownloadUrl = this.httpProtocol + "//www.skype.com/download";
@@ -31,7 +33,7 @@ var Skype = new function () {
 		this.SkypeUriAssetMap = c;
 		this.SkypeUriAssetColorMap = g;
 		this.SkypeUriNameLinks = m;
-		this.assetPrefix = this.httpProtocol + "//www.skypeassets.com/i/scom/images/skype-buttons/";
+		this.assetPrefix = this.assetsDomain + "/i/scom/images/skype-buttons/";
 		this.assetSizeArray = [10, 12, 14, 16, 24, 32];
 		this.assetSizeDefault = 16;
 		this.assetMarginMinimum = 16;
@@ -81,6 +83,7 @@ var Skype = new function () {
 		this.isAndroid_Gingerbread = false;
 		this.isAndroid_IceCream = false;
 		this.isAndroid_JellyBean = false;
+		this.isIOS7 = false;
 		this.isIOS6 = false;
 		this.isIOS5 = false;
 		this.isIOS4 = false;
@@ -98,7 +101,7 @@ var Skype = new function () {
 		this.isSafari = false;
 		this.showDropdown = i;
 		this.hideDropdown = d;
-		this.analyzeScript = this.httpProtocol + "//www.skypeassets.com/i/scom/js/" + "skype-analytics.js";
+		this.analyzeScript = this.assetsDomain + "/i/scom/js/" + "skype-analytics.js";
 		this.includeJavascript = p;
 		this.includeJavascript(this.analyzeScript);
 		if (navigator.userAgent.indexOf("Windows NT 5.1") !== -1) {
@@ -129,7 +132,24 @@ var Skype = new function () {
 									this.isOSX_MountainLion = true;
 									this.detectedPlatform = "OSX 10.8"
 								} else {
-									if (navigator.userAgent.indexOf("Linux") !== -1) {
+									if(navigator.userAgent.indexOf("Android") !== -1) {
+										this.isAndroid = true;
+										this.detectedPlatform = "Android"
+
+										if (navigator.userAgent.indexOf("Android 2.3") !== -1) {
+											this.isAndroid_Gingerbread = true;
+											this.detectedPlatform = "Android 2.3"
+										}
+										else if(navigator.userAgent.indexOf("Android 4.0") !== -1) {
+											this.isAndroid_IceCream = true;
+											this.detectedPlatform = "Android 4.0"
+										}
+										else if(navigator.userAgent.indexOf("Android 4.1") !== -1) {
+											this.isAndroid_JellyBean = true;
+											this.detectedPlatform = "Android 4.1"
+										}
+									}
+									else if (navigator.userAgent.indexOf("Linux") !== -1) {
 										this.isLinux = true;
 										this.detectedPlatform = "Linux"
 									} else {
@@ -137,36 +157,21 @@ var Skype = new function () {
 											this.isWinPhone8 = true;
 											this.detectedPlatform = "Windows Phone 8"
 										} else {
-											if (navigator.userAgent.indexOf("Android") !== -1) {
-												this.isAndroid = true;
-												this.detectedPlatform = "Android"
+											if (navigator.userAgent.match(/OS 7_[0-9_]+ like Mac OS X/i)) {
+												this.isIOS7 = true;
+												this.detectedPlatform = "iOS7"
 											} else {
-												if (navigator.userAgent.indexOf("Android 2.3") !== -1) {
-													this.isAndroid_Gingerbread = true;
-													this.detectedPlatform = "Android 2.3"
+												if (navigator.userAgent.match(/OS 6_[0-9_]+ like Mac OS X/i)) {
+													this.isIOS6 = true;
+													this.detectedPlatform = "iOS6"
 												} else {
-													if (navigator.userAgent.indexOf("Android 4.0") !== -1) {
-														this.isAndroid_IceCream = true;
-														this.detectedPlatform = "Android 4.0"
+													if (navigator.userAgent.match(/OS 5_[0-9_]+ like Mac OS X/i)) {
+														this.isIOS5 = true;
+														this.detectedPlatform = "iOS5"
 													} else {
-														if (navigator.userAgent.indexOf("Android 4.1") !== -1) {
-															this.isAndroid_JellyBean = true;
-															this.detectedPlatform = "Android 4.1"
-														} else {
-															if (navigator.userAgent.match(/OS 6_[0-9_]+ like Mac OS X/i)) {
-																this.isIOS6 = true;
-																this.detectedPlatform = "iOS6"
-															} else {
-																if (navigator.userAgent.match(/OS 5_[0-9_]+ like Mac OS X/i)) {
-																	this.isIOS5 = true;
-																	this.detectedPlatform = "iOS5"
-																} else {
-																	if (navigator.userAgent.match(/OS 4_[0-9_]+ like Mac OS X/i)) {
-																		this.isIOS4 = true;
-																		this.detectedPlatform = "iOS4"
-																	}
-																}
-															}
+														if (navigator.userAgent.match(/OS 4_[0-9_]+ like Mac OS X/i)) {
+															this.isIOS4 = true;
+															this.detectedPlatform = "iOS4"
 														}
 													}
 												}
@@ -239,10 +244,14 @@ var Skype = new function () {
 			this.useDetection = "false"
 		}
 		if (this.isAndroid) {
-			this.SkypeClientDownloadUrl = "market://details?id=com.skype.raider"
+			this.SkypeClientDownloadUrl = "market://details?id=com.skype.raider";
 		} else {
-			if (this.isIOS6 || this.isIOS5 || this.isIOS4) {
-				this.SkypeClientDownloadUrl = "itms-apps://itunes.com/apps/skype"
+			if (this.isIPhone || this.IsPod) {
+				this.SkypeClientDownloadUrl = "http://appstore.com/skypeforiphone";
+			} else {
+				if (this.IsPad) {
+					this.SkypeClientDownloadUrl = "http://appstore.com/skypeforipad";
+				}
 			}
 		}
 
@@ -509,15 +518,22 @@ var Skype = new function () {
 			if (!this.useDetection || (this.isWin8 && this.isIE10) || this.isIE7 || this.isIE6) {
 				A = B
 			} else {
-				if ((this.isWinPhone8 && this.isIE10) || (this.isAndroid && this.isAndroidBrowser) || (this.isAndroid && this.isChrome)) {
+				if ((this.isWinPhone8 && this.isIE10) || (this.isAndroid && this.isAndroidBrowser)) {
 					A = "javascript://";
 					v += " Skype.displayNotSupportedMsg();"
-				} else {
+				}
+				else if(this.isAndroid && this.isChrome)
+				{
+					v = "Skype.trySkypeUri_Android_Chrome('" + this.analyzeCrumbIndex + "');";
+					A = B
+				}
+				else {
 					y = "Skype.trySkypeUri_Generic";
 					if (this.isIE10 || this.isIE9 || this.isIE8) {
 						y = "Skype.trySkypeUri_IE9_IE8"
 					} else {
-						if ((this.isIOS6 || this.isIOS5 || this.isIOS4) && this.isSafari) {
+						// Note: iOS8 handles Skype.trySkypeUri_Generic so no need to switch to Skype.trySkypeUri_IOS_Safari
+						if ((this.isIOS7 || this.isIOS6 || this.isIOS5 || this.isIOS4) && this.isSafari) {
 							y = "Skype.trySkypeUri_IOS_Safari"
 						} else {
 							if (this.isAndroid && this.isFF) {
@@ -810,7 +826,7 @@ var Skype = new function () {
 		function a(s, v, t) {
 			var u = true;
 			window.onblur = function () {
-				u = false
+				u = false;
 			};
 			var r = document.getElementById(v);
 			if (r !== null) {
@@ -823,6 +839,27 @@ var Skype = new function () {
 					window.location = Skype.SkypeClientDownloadUrl
 				}
 			}, 2000)
+		}
+
+		function a_androidchrome(analyzeCrumbIndex) {
+			var documentVisible = true;
+			var vizchangecb;
+
+			document.addEventListener("visibilitychange", vizchangecb = function () {
+				documentVisible = !document.hidden;
+			});
+
+			setTimeout(function () {
+				
+				if (documentVisible) {
+					alert(Skype.installSkypeMsg);
+					Skype.tryAnalyzeSkypeUri("redirect", analyzeCrumbIndex);
+					window.location = Skype.SkypeClientDownloadUrl
+				}
+
+				document.removeEventListener("visibilitychange", vizchangecb);
+			}, 6000) // if Skype app is booting the Skype splash screen prevents the visibilitychange event firing
+			// until it is done, so we allow for a longer timeout in case we have to wait for it
 		}
 	}();
 	

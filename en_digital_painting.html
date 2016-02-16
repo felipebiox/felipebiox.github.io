@@ -3,118 +3,129 @@
 <html>
 
 <head>
-<title>BIOX - Digital Painting</title>
 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOX - Digital Painting</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/felipebiox.css">
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
 
-<link rel="stylesheet" type="text/css" href="felipebiox.css">
-<link rel="stylesheet" type="text/css" href="slideshow.css">
-<link rel="stylesheet" type="text/css" href="perfect-scrollbar/css/perfect-scrollbar.css"/>
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="jquery.cycle.all.js"></script>
-<script type="text/javascript" src="slideshow.js"></script>
-<script type="text/javascript" src="perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
-
-<script>
-
-$(document).ready(function ($) {
-	$("body").perfectScrollbar();
-	$(".container").perfectScrollbar();
-});
-var menuState = 1;
-
-</script>
+	<script>
+		var menuState = 1;
+	</script>
 
 </head>
 
-<body>
+<body style="background-color:transparent;">
 
-<div class="navbar_wrap">
-<div class="navbar">
-		
-		<a id="button1" href="#" onclick="menuToggle()">MENU</a>
-		  
-		  <script>
-		  
-			function menuToggle() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==1) {
-					menuState = 2;
-					menuTB.animate({
-						height: "+=650px"
-					}, 1000 );
-					outclicker.animate({
-						width: "100%",
-						height: "100%"
-					}, 1000 );
-				}
-				else {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=650px"
-					}, 1000 );
-				}
-			}
-			
-		  </script>
-		  
-		<div class="top-menu">
-			<ul class="nav">
-			<li><a href="en_about.html">About</a></li><!--
------------><li><a href="en_animated_2d.html">Animated 2D</a></li><!--
------------><li><a href="en_digital_painting.html">Digital Painting</a></li><!--
------------><li><a href="en_mixed_techniques.html">Mixed Techniques</a></li><!--
------------><li><a href="en_collabs.html">Collabs</a></li><!--
------------><li><a href="en_editorial.html">Editorial</a></li><!--
------------><li><a href="en_dg_diversos.html">Graphic Design</a></li><!--
------------><li><a href="en_glyphs.html">Glyphs</a></li><!--
------------><li><a href="en_contact.html">Contact</a></li>
-			</ul>
+<div class="row">
+	<div class="navbar_wrap">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10 navbar">
+				
+				<a id="button1" href="#" onclick="menuToggle()">MENU</a>
+				  
+				  <script>
+				  
+					function menuToggle() {
+						var menuTB = $(".top-menu");
+						var outclicker = $(".out-clicker");
+						if (menuState==1) {
+							menuTB.animate({
+								height: "+=650px"
+							}, 1000 );
+							outclicker.animate({
+								width: "100%",
+								height: "100%"
+							}, 1000 );
+							menuState = 2;
+						}
+						else {
+							menuTB.animate({
+								height: "-=650px"
+							}, 1000 );
+							menuState = 1;
+						}
+					}
+					
+				  </script>
+				  
+				<div class="top-menu">
+					<ul class="nav">
+					<li><a href="en_about.html">About</a></li><!--
+-------------------><li><a href="en_animated_2d.html">Animated 2D</a></li><!--
+-------------------><li><a href="en_digital_painting.html">Digital Painting</a></li><!--
+-------------------><li><a href="en_mixed_techniques.html">Mixed Techniques</a></li><!--
+-------------------><li><a href="en_collabs.html">Collabs</a></li><!--
+-------------------><li><a href="en_editorial.html">Editorial</a></li><!--
+-------------------><li><a href="en_dg_diversos.html">Graphic Design</a></li><!--
+-------------------><li><a href="en_glyphs.html">Glyphs</a></li><!--
+-------------------><li><a href="en_contact.html">Contact</a></li>
+					</ul>
+				</div>
 		</div>
-</div>
-</div>
+		<div class="col-xs-1"></div>
+	</div>
 
-<div class="out-clicker">
-	<a id="outClicker" href="#" onclick="menuOff()"></a>
-		  
-		  <script>
-		  
-			function menuOff() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==2) {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=575px"
-					}, 1000 );
-					outclicker.animate({
-						width: "0",
-						height: "0"
-					}, 0 );
+	<div class="out-clicker">
+		<a id="outClicker" href="#" onclick="menuOff()"></a>
+			  
+			  <script>
+			  
+				function menuOff() {
+					var menuTB = $(".top-menu");
+					var outclicker = $(".out-clicker");
+					if (menuState==2) {
+						menuState = 1;
+						menuTB.animate({
+							height: "-=650px"
+						}, 1000 );
+						outclicker.animate({
+							width: "0",
+							height: "0"
+						}, 0 );
+					}
 				}
-			}
-			
-		  </script>
-</div>
+				
+			  </script>
+	</div>
 
-<div class="header">
-	<div class="header_stars">
-	</div>
-	<div class="bush">
-	</div>
-	<div class="header-wrap">
-		<h1>Felipe Biox</h1>
-		<h3>A work in progress portfolio.</h3>
-		<div class="site-branding">
+	<div id="header" class="row">
+		<div class="header_stars">
+			<div class="stars_cover"></div>
 		</div>
 		
-		<div id="motor"></div>
-	</div>
+		<div class="bush"></div>
+		
+		<div id="header-wrap" class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10 header-wrap">
+				<h1>Felipe Biox</h1>
+					
+				<h3>A Work In Progress Portfolio</h3>
+					
+				<div class="site-branding"></div>
+					
+				<div id="motor"></div>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
 
+	</div>
 </div>
 
-<div class="container">
-
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div id="container" class="col-xs-10">
 
 	  <div class="top-elements">
 		  
@@ -122,159 +133,166 @@ var menuState = 1;
 	  </div>
 
 
-  <div class="content">
-	
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<div class="page-content-inner">
-			
-				<div id="show">
-
-					<div id="pager"></div>
-					<div id="pause">&asymp;</div>
-					<div id="play">&Delta;</div>
-					<div id="next">></div>
-					<div id="prev"><</div>
-
-					<div id="slider">
-					
-						<div class="items">
-							<img src="digital_painting/reminder.png">
-							<div class="info">
-								<h2>The Reminder</h2>
-								<p>The bird of wisdom fights procrastination. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/arara_dragon.png">
-							<div class="info">
-								<h2>The Macaw Dragon</h2>
-								<p>If you are in the tropics, beware! </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-
-						<div class="items">
-							<img src="digital_painting/arara_dragon_2.png">
-							<div class="info">
-								<h2>The Macaw Dragon Hunts</h2>
-								<p>Divers beware! It's fast!. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/assault_goblin_2.png">
-							<div class="info">
-								<h2>The Assault Goblin</h2>
-								<p>A goblin and his favorite jungle vehicle. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/motor_pah.png">
-							<div class="info">
-								<h2>The Motor Pah</h2>
-								<p>Grandpa goes wild. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/dream_catcher.png">
-							<div class="info">
-								<h2>The Dream Catcher</h2>
-								<p>It is said that he stalks you in your dreams. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/kelly2.png">
-							<div class="info">
-								<h2>The Snow Maiden</h2>
-								<p>Kelly likes to hunt, but this time she is the prey. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/calm_woods.png">
-							<div class="info">
-								<h2>The Calm Woods</h2>
-								<p>It's nap time in the fairy woods. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/timeless-mecha.png">
-							<div class="info">
-								<h2>The Timeless Mecha</h2>
-								<p>It's been out there for a while, no one knows for how long. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/elements.png">
-							<div class="info">
-								<h2>The Elements</h2>
-								<p>Fire, Earth, Air, Water! </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/r_gallagher.png">
-							<div class="info">
-								<h2>The Rory Gallagher</h2>
-								<p>This man played with his heart. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/sgtable3.png">
-							<div class="info">
-								<h2>The Space Ghost Show</h2>
-								<p>The lights are long gone, but they still sit there in the dark. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/ogrito.png">
-							<div class="info">
-								<h2>The Scream</h2>
-								<p>The terrifying screaming horse. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/p-001.png">
-							<div class="info">
-								<h2>The Walker</h2>
-								<p>This is a concept art for a robot walker. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="digital_painting/p-005.png">
-							<div class="info">
-								<h2>The Walker 2</h2>
-								<p>A second concept for the same idea. </p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-					
-					</div><!--End--slider-->
-				</div><!--End--show-->
+	  <div class="content">
+		
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-content-inner">
 				
-			<hr></hr>
-			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+					<div id="show">
+
+						<div id="pager"></div>
+						<div id="pause">&asymp;</div>
+						<div id="play">&Delta;</div>
+						<div id="next">></div>
+						<div id="prev"><</div>
+
+						<div id="slider">
+						
+							<div class="items">
+								<img src="imgs/digital_painting/reminder.png">
+								<div class="info">
+									<h2>The Reminder</h2>
+									<p>The bird of wisdom fights procrastination. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/arara_dragon.png">
+								<div class="info">
+									<h2>The Macaw Dragon</h2>
+									<p>If you are in the tropics, beware! </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+
+							<div class="items">
+								<img src="imgs/digital_painting/arara_dragon_2.png">
+								<div class="info">
+									<h2>The Macaw Dragon Hunts</h2>
+									<p>Divers beware! It's fast!. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/assault_goblin_2.png">
+								<div class="info">
+									<h2>The Assault Goblin</h2>
+									<p>A goblin and his favorite jungle vehicle. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/motor_pah.png">
+								<div class="info">
+									<h2>The Motor Pah</h2>
+									<p>Grandpa goes wild. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/dream_catcher.png">
+								<div class="info">
+									<h2>The Dream Catcher</h2>
+									<p>It is said that he stalks you in your dreams. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/kelly2.png">
+								<div class="info">
+									<h2>The Snow Maiden</h2>
+									<p>Kelly likes to hunt, but this time she is the prey. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/calm_woods.png">
+								<div class="info">
+									<h2>The Calm Woods</h2>
+									<p>It's nap time in the fairy woods. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/timeless-mecha.png">
+								<div class="info">
+									<h2>The Timeless Mecha</h2>
+									<p>It's been out there for a while, no one knows for how long. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/elements.png">
+								<div class="info">
+									<h2>The Elements</h2>
+									<p>Fire, Earth, Air, Water! </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/r_gallagher.png">
+								<div class="info">
+									<h2>The Rory Gallagher</h2>
+									<p>This man played with his heart. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/sgtable3.png">
+								<div class="info">
+									<h2>The Space Ghost Show</h2>
+									<p>The lights are long gone, but they still sit there in the dark. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/ogrito.png">
+								<div class="info">
+									<h2>The Scream</h2>
+									<p>The terrifying screaming horse. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/p-001.png">
+								<div class="info">
+									<h2>The Walker</h2>
+									<p>This is a concept art for a robot walker. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/digital_painting/p-005.png">
+								<div class="info">
+									<h2>The Walker 2</h2>
+									<p>A second concept for the same idea. </p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+						
+						</div><!--End--slider-->
+					</div><!--End--show-->
+					
+				<hr></hr>
+				<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+				</div>
 			</div>
 		</div>
+	  </div>
 	</div>
-  </div>
-  
+	<div class="col-xs-1"></div>
 </div>
 
-<footer>
-	<h6>Felipe Biox. All rights reserved.</h6>
-	<a id="fl_us" href="en_digital_painting.html"></a>
-	<a id="fl_br" href="pt_pintura_digital.html"></a>
-</footer>
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-10" style="padding:0;">
+		<footer>
+			<h6>Felipe Biox. All rights reserved.</h6>
+			<a id="fl_us" href="en_about.html"></a>
+			<a id="fl_br" href="pt_sobre.html"></a>
+		</footer>
+	</div>
+	<div class="col-xs-1"></div>
+</div>
 
 </body>
 </html>

@@ -3,248 +3,265 @@
 <html>
 
 <head>
-<title>BIOX - Animated 2D</title>
 <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BIOX - 2D Animado</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/felipebiox.css">
+	<link rel="stylesheet" type="text/css" href="css/slideshow.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="js/slideshow.js"></script>
 
-<link rel="stylesheet" type="text/css" href="felipebiox.css">
-<link rel="stylesheet" type="text/css" href="slideshow.css">
-<link rel="stylesheet" type="text/css" href="perfect-scrollbar/css/perfect-scrollbar.css"/>
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="jquery.cycle.all.js"></script>
-<script type="text/javascript" src="slideshow.js"></script>
-<script type="text/javascript" src="perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
-
-<script>
-
-$(document).ready(function ($) {
-	$("body").perfectScrollbar();
-	$(".container").perfectScrollbar();
-});
-
-var menuState = 1;
-
-</script>
+	<script>
+		var menuState = 1;
+	</script>
 
 </head>
 
-<body>
+<body style="background-color:transparent;">
 
-<div class="navbar_wrap">
-<div class="navbar">
-		
-		<a id="button1" href="#" onclick="menuToggle()">MENU</a>
-		  
-		  <script>
-		  
-			function menuToggle() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==1) {
-					menuState = 2;
-					menuTB.animate({
-						height: "+=650px"
-					}, 1000 );
-					outclicker.animate({
-						width: "100%",
-						height: "100%"
-					}, 1000 );
-				}
-				else {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=650px"
-					}, 1000 );
-				}
-			}
-			
-		  </script>
-		  
-		<div class="top-menu">
-			<ul class="nav">
-			<li><a href="pt_sobre.html">Sobre</a></li><!--
------------><li><a href="pt_2d_animado.html">2D Animado</a></li><!--
------------><li><a href="pt_pintura_digital.html">Pintura Digital</a></li><!--
------------><li><a href="pt_tecnicas_mistas.html">Técnicas Mistas</a></li><!--
------------><li><a href="pt_colaboracoes.html">Colaborações</a></li><!--
------------><li><a href="pt_editorial.html">Editorial</a></li><!--
------------><li><a href="pt_dg_diversos.html">Design Gráfico</a></li><!--
------------><li><a href="pt_glifos.html">Glifos</a></li><!--
------------><li><a href="pt_contato.html">Contato</a></li>
-			</ul>
+<div class="row">
+	<div class="navbar_wrap">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10 navbar">
+				
+				<a id="button1" href="#" onclick="menuToggle()">MENU</a>
+				  
+				  <script>
+				  
+					function menuToggle() {
+						var menuTB = $(".top-menu");
+						var outclicker = $(".out-clicker");
+						if (menuState==1) {
+							menuTB.animate({
+								height: "+=650px"
+							}, 1000 );
+							outclicker.animate({
+								width: "100%",
+								height: "100%"
+							}, 1000 );
+							menuState = 2;
+						}
+						else {
+							menuTB.animate({
+								height: "-=650px"
+							}, 1000 );
+							menuState = 1;
+						}
+					}
+					
+				  </script>
+				  
+				<div class="top-menu">
+					<ul class="nav">
+					<li><a href="pt_sobre.html">Sobre</a></li><!--
+-------------------><li><a href="pt_2d_animado.html">2D Animado</a></li><!--
+-------------------><li><a href="pt_pintura_digital.html">Pintura Digital</a></li><!--
+-------------------><li><a href="pt_tecnicas_mistas.html">Técnicas Mistas</a></li><!--
+-------------------><li><a href="pt_colaboracoes.html">Colaborações</a></li><!--
+-------------------><li><a href="pt_editorial.html">Editorial</a></li><!--
+-------------------><li><a href="pt_dg_diversos.html">Design Gráfico</a></li><!--
+-------------------><li><a href="pt_glifos.html">Glifos</a></li><!--
+-------------------><li><a href="pt_contato.html">Contato</a></li>
+					</ul>
+				</div>
 		</div>
-</div>
-</div>
+		<div class="col-xs-1"></div>
+	</div>
 
-<div class="out-clicker">
-	<a id="outClicker" href="#" onclick="menuOff()"></a>
-		  
-		  <script>
-		  
-			function menuOff() {
-				var menuTB = $(".top-menu");
-				var outclicker = $(".out-clicker");
-				if (menuState==2) {
-					menuState = 1;
-					menuTB.animate({
-						height: "-=575px"
-					}, 1000 );
-					outclicker.animate({
-						width: "0",
-						height: "0"
-					}, 0 );
+	<div class="out-clicker">
+		<a id="outClicker" href="#" onclick="menuOff()"></a>
+			  
+			  <script>
+			  
+				function menuOff() {
+					var menuTB = $(".top-menu");
+					var outclicker = $(".out-clicker");
+					if (menuState==2) {
+						menuState = 1;
+						menuTB.animate({
+							height: "-=650px"
+						}, 1000 );
+						outclicker.animate({
+							width: "0",
+							height: "0"
+						}, 0 );
+					}
 				}
-			}
-			
-		  </script>
-</div>
+				
+			  </script>
+	</div>
 
-<div class="header">
-	<div class="header_stars">
-	</div>
-	<div class="bush">
-	</div>
-	<div class="header-wrap">
-		<h1>Felipe Biox</h1>
-		<h3>A work in progress portfolio.</h3>
-		<div class="site-branding">
+	<div id="header" class="row">
+		<div class="header_stars">
+			<div class="stars_cover"></div>
 		</div>
 		
-		<div id="motor"></div>
-	</div>
+		<div class="bush"></div>
+		
+		<div id="header-wrap" class="row">
+			<div class="col-xs-1"></div>
+			<div class="col-xs-10 header-wrap">
+				<h1>Felipe Biox</h1>
+					
+				<h3>Um Portfolio em Desenvolvimento</h3>
+					
+				<div class="site-branding"></div>
+					
+				<div id="motor"></div>
+			</div>
+			<div class="col-xs-1"></div>
+		</div>
 
+	</div>
 </div>
 
-<div class="container">
-
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div id="container" class="col-xs-10">
 
 	  <div class="top-elements">
+		  
 
 		  <h1 class="page-title">2D Animado</h1>
 	  </div>
 
+	  <div class="content">
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-content-inner">
+				<p style="margin:0;">Estes são alguns dos personagens e assets animados que criei para projetos indie autorais. Alguns são idéias minhas, outros são baseado em conceitos criados por outras pessoas.</p>
+				<br>
+				<div id="show">
 
-  <div class="content">
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<div class="page-content-inner">
-			<p style="margin:0;">Estes são alguns dos personagens e assets animados que criei para projetos indie autorais. Alguns são idéias minhas, outros são baseado em conceitos criados por outras pessoas.</p>
-			<br>
-			<div id="show">
+						<div id="pager"></div>
+						<div id="pause">&asymp;</div>
+						<div id="play">&Delta;</div>
+						<div id="next">></div>
+						<div id="prev"><</div>
 
-					<div id="pager"></div>
-					<div id="pause">&asymp;</div>
-					<div id="play">&Delta;</div>
-					<div id="next">></div>
-					<div id="prev"><</div>
+						<div id="slider">
+						
+							<div class="items">
+								<img src="imgs/animated_2d/angry_marines_3.gif">
+								<div class="info">
+									<h2>O Lança-Fuzileiro-Raivoso</h2>
+									<p>Neste caso, criei apenas a animação. Autor da idéia desconhecido.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/kb_s_export1.gif">
+								<div class="info">
+									<h2>O Urso</h2>
+									<p>Ciclo de caminhada, personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
 
-					<div id="slider">
-					
-						<div class="items">
-							<img src="animated_2d/angry_marines_3.gif">
-							<div class="info">
-								<h2>O Lança-Fuzileiro-Raivoso</h2>
-								<p>Neste caso, criei apenas a animação. Autor da idéia desconhecido.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
+							<div class="items">
+								<img src="imgs/animated_2d/doll.gif">
+								<div class="info">
+									<h2>A Boneca Viva</h2>
+									<p>Animação da posição estática, personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/robot_mov_a1.gif">
+								<div class="info">
+									<h2>O Robô</h2>
+									<p>Ciclo de caminhada, personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/panda_atk1_test.gif">
+								<div class="info">
+									<h2>O Panda</h2>
+									<p>Sequência de ataques, personagem original inspirado em "Po - Kung Fu Panda".</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/panda_idle_test1.gif">
+								<div class="info">
+									<h2>O Panda 2</h2>
+									<p>Animação da posição estática, personagem original inspirado em "Po - Kung Fu Panda".</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/plantman_gif_3.gif">
+								<div class="info">
+									<h2>O Homem Planta</h2>
+									<p>Silhueta - Ciclo de caminhada, personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/robot_moving_test.gif">
+								<div class="info">
+									<h2>O Pequeno Robô</h2>
+									<p>Silhueta - Ciclo de caminhada, personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/alien2.gif">
+								<div class="info">
+									<h2>A Formiga Alienígena</h2>
+									<p>Ciclo de caminhada (visão de cima), personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/alien1.gif">
+								<div class="info">
+									<h2>A Larva da Formiga Alienígena</h2>
+									<p>Ciclo de caminhada (visão de cima), personagem original.</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
+							<div class="items">
+								<img src="imgs/animated_2d/water3_3_export.gif">
+								<div class="info">
+									<h2>A Água</h2>
+									<p>Tile animado de água (visão de cima).</p>
+								</div><!--End--info-->
+							</div><!--End--items-->
+							
 						
-						<div class="items">
-							<img src="animated_2d/kb_s_export1.gif">
-							<div class="info">
-								<h2>O Urso</h2>
-								<p>Ciclo de caminhada, personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-
-						<div class="items">
-							<img src="animated_2d/doll.gif">
-							<div class="info">
-								<h2>A Boneca Viva</h2>
-								<p>Animação da posição estática, personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/robot_mov_a1.gif">
-							<div class="info">
-								<h2>O Robô</h2>
-								<p>Ciclo de caminhada, personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/panda_atk1_test.gif">
-							<div class="info">
-								<h2>O Panda</h2>
-								<p>Sequência de ataques, personagem original inspirado em "Po - Kung Fu Panda".</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/panda_idle_test1.gif">
-							<div class="info">
-								<h2>O Panda 2</h2>
-								<p>Animação da posição estática, personagem original inspirado em "Po - Kung Fu Panda".</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/plantman_gif_3.gif">
-							<div class="info">
-								<h2>O Homem Planta</h2>
-								<p>Silhueta - Ciclo de caminhada, personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/robot_moving_test.gif">
-							<div class="info">
-								<h2>O Pequeno Robô</h2>
-								<p>Silhueta - Ciclo de caminhada, personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/alien2.gif">
-							<div class="info">
-								<h2>A Formiga Alienígena</h2>
-								<p>Ciclo de caminhada (visão de cima), personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/alien1.gif">
-							<div class="info">
-								<h2>A Larva da Formiga Alienígena</h2>
-								<p>Ciclo de caminhada (visão de cima), personagem original.</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-						<div class="items">
-							<img src="animated_2d/water3_3_export.gif">
-							<div class="info">
-								<h2>A Água</h2>
-								<p>Tile animado de água (visão de cima).</p>
-							</div><!--End--info-->
-						</div><!--End--items-->
-						
-					
-					</div><!--End--slider-->
-				</div><!--End--show-->
-			
-			<hr></hr>
-			<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+						</div><!--End--slider-->
+					</div><!--End--show-->
+				
+				<hr></hr>
+				<h3 style="text-align:center; margin:0;">Luis Felipe Thofehrn Castro</h3>
+				</div>
 			</div>
 		</div>
+	  </div>
 	</div>
-  </div>
-  
+	<div class="col-xs-1"></div>
 </div>
 
-<footer>
-	<h6>Felipe Biox. Todos os direitos reservados.</h6>
-	<a id="fl_us" href="en_animated_2d.html"></a>
-	<a id="fl_br" href="pt_2d_animado.html"></a>
-</footer>
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-10" style="padding:0;">
+		<footer>
+			<h6>Felipe Biox. Todos os direitos reservados.</h6>
+			<a id="fl_us" href="en_about.html"></a>
+			<a id="fl_br" href="pt_sobre.html"></a>
+		</footer>
+	</div>
+	<div class="col-xs-1"></div>
+</div>
 
 			
 			

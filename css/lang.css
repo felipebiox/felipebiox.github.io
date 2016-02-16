@@ -45,7 +45,7 @@ h6 {
 	display: block;
 	top: -20px;
 	left: 320px;
-	background-image: url("header/motor_pah_anm_small.gif");
+	background-image: url("../imgs/header/motor_pah_anm_small.gif");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
@@ -67,7 +67,7 @@ h6 {
 	display: block;
 	position: relative;
 	float: left;
-	background-image: url("index/en_us_1.png");
+	background-image: url("../imgs/index/en_us_1.png");
 	background-size: 200px 125px;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -81,7 +81,7 @@ h6 {
 	display: block;
 	position: relative;
 	float: right;
-	background-image: url("index/pt_br_1.png");
+	background-image: url("../imgs/index/pt_br_1.png");
 	background-size: 200px 125px;
 	background-repeat: no-repeat;
 	background-position: center center;
