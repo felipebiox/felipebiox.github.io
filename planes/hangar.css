@@ -1,0 +1,267 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	font-size: 62.75%;
+}
+
+body {
+	margin: 0 auto;
+	width: 960px;
+	height: 640px;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.main_wrapper {
+	margin: 0;
+	width: 960px;
+	height: 640px;
+	position: relative;
+	top: 156px;
+	overflow: hidden;
+	outline-width: 0 2px 0 2px;
+	outline-style: solid;
+	outline-color: #444;
+}
+
+.hangar_UI_1 {
+	margin: 0;
+	width: 560px;
+	height: 640px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	left: 230px;
+	z-index: 99;
+	background-image: url("assets/hangar_UI_1.png");
+	background-size: 560px 640px;
+}
+
+#hangar_start {
+	margin: 0;
+	width: 284px;
+	height: 64px;
+	display: block;
+	position: absolute;
+	left: 105px;
+	bottom: 33px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.L_btn {
+	margin: 0;
+	width: 340px;
+	height: 118px;
+	display: block;
+	position: absolute;
+	left: 340px;
+	bottom: 0;
+	background-image: url("assets/hangar_UI_L.png");
+	background-size: 100% 100%;
+	z-index: 9;
+}
+
+#hangar_L {
+	margin: 0;
+	width: 70px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	left: 86px;
+	bottom: 18px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+.R_btn {
+	margin: 0;
+	width: 340px;
+	height: 118px;
+	display: block;
+	position: absolute;
+	right: 340px;
+	bottom: 0;
+	background-image: url("assets/hangar_UI_R.png");
+	background-size: 100% 100%;
+	z-index: 9;
+}
+
+#hangar_R {
+	margin: 0;
+	width: 70px;
+	height: 70px;
+	display: block;
+	position: absolute;
+	right: 86px;
+	bottom: 18px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+	z-index: 9;
+}
+
+#hangar_L:hover, #hangar_R:hover, #hangar_start:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#pilot_briefing {
+	margin: 0;
+	width: 400px;
+	height: 400px;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: -400px;
+	background-size: 100% 100%;
+	z-index: 999;
+}
+
+#briefing_panel {
+	margin: 0;
+	width: 400px;
+	height: 400px;
+	display: block;
+	position: absolute;
+	background-image: url("assets/hangar_UI_2.png");
+	background-size: 100% 100%;
+	z-index: 9;
+}
+
+.briefing_slide_container {
+	margin: 0;
+	width: 380px;
+	height: 320px;
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	top: 60px;
+	left: 6px;
+}
+
+.briefing_slider {
+	margin: 0;
+	width: 1164px;
+	height: 320px;
+	position: absolute;
+	display: block;
+}
+
+.briefing_MiG-23 {
+	margin: 0;
+	width: 388px;
+	height: 320px;
+	position: absolute;
+	display: block;
+	left: 0;
+	background-image: url("assets/char_2.png");
+	background-repeat: no-repeat;
+}
+
+.briefing_F-14B {
+	margin: 0;
+	width: 388px;
+	height: 320px;
+	position: absolute;
+	display: block;
+	left: 388px;
+	background-image: url("assets/char_1.png");
+	background-repeat: no-repeat;
+}
+
+.briefing_AJ-37 {
+	margin: 0;
+	width: 388px;
+	height: 320px;
+	position: absolute;
+	display: block;
+	left: 776px;
+	background-image: url("assets/char_3.png");
+	background-repeat: no-repeat;
+}
+
+.hangar_top_bg {
+	margin: 0;
+	width: 960px;
+	height: 640px;
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	z-index: 5;
+	background-image: url("assets/hangar_top_bg.png");
+	background-size: 960px 640px;
+	background-repeat: no-repeat;
+}
+
+.hangar_slide {
+	margin: 0;
+	width: 350px;
+	height: 284px;
+	display: block;
+	position: absolute;
+	left: 88px;
+	top: 86px;
+	overflow: hidden;
+	z-index: 2;
+	
+}
+
+#hangar_cover {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0px;
+	position: absolute;
+	z-index: 7;
+	background-image: url("assets/hangar_cover.png");
+	background-size: 100% 100%;
+}
+
+#hangar_slide_container {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0px;
+	position: absolute;
+}
+
+.hangar_MiG-23 {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	background-image: url("assets/hangar_MiG-23.png");
+	background-size: 100% auto;
+}
+
+.hangar_F-14B {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 100%;
+	background-image: url("assets/hangar_F-14B.png");
+	background-size: 100% auto;
+}
+
+.hangar_AJ-37 {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 200%;
+	background-image: url("assets/hangar_AJ-37.png");
+	background-size: 100% auto;
+}

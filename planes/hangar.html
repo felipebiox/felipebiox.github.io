@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>Hangar</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="felipebiox.css">
+<link rel="stylesheet" type="text/css" href="hangar.css">
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+<script>
+
+var state = 1;
+
+var state_start = 1;
+
+function goTestDrive() {
+	if (state==1) {
+		window.open("testdrive_MiG-23.html",'_self');
+	}
+	else if (state==2) {
+		window.open("testdrive_F-14B.html",'_self');
+	}
+	else if (state==3) {
+		window.open("testdrive_AJ-37.html",'_self');
+	}
+}
+
+</script>
+</head>
+
+<body>
+
+<div class="main_wrapper">
+
+<div class="hangar_UI_1">
+
+	<a id="hangar_start" href="#" onclick="startGame()"></a>
+		<script>
+			function startGame() {
+				
+				
+				if (state_start==1) {
+					state_start = state_start + 1;
+						$(".L_btn").animate({
+							left: "0px"
+						} , 1000);
+
+
+						$(".R_btn").animate({
+							right: "0px"
+						} , 1000);
+
+
+						$("#pilot_briefing").animate({
+							top: "0px"
+						} , 1000);
+
+
+						$("#hangar_cover").animate({
+							top: "-100%"
+						} , 1000);
+
+				}
+				else {
+					goTestDrive();
+				}
+			}
+		</script>
+
+</div>
+
+
+<div class="L_btn">
+	<a id="hangar_L" href="#" onclick="scrollSliderLeft()"></a>
+		<script>
+			function scrollSliderLeft() {
+				var slider = $("#hangar_slide_container");
+				var briefSlider = $(".briefing_slider");
+				console.log(state);
+				
+				if (state==1) {
+					console.log("spoon");
+				}
+				else {
+					state = state - 1;
+					slider.animate({
+						left: "+=100%"
+					} , 1000);
+					briefSlider.animate({
+						left: "+=388px"
+					} , 1000);
+				}
+			}
+		</script>
+</div>		
+
+<div class="R_btn">	
+	<a id="hangar_R" href="#" onclick="scrollSliderRight()"></a>
+		<script>
+			function scrollSliderRight() {
+				var slider = $("#hangar_slide_container");
+				var briefSlider = $(".briefing_slider");
+				console.log(state);
+				
+				if (state==3) {
+					console.log("nospoon");
+				}
+				else {
+					state = state + 1;
+					slider.animate({
+						left: "-=100%"
+					} , 1000);
+					briefSlider.animate({
+						left: "-=388px"
+					} , 1000);
+				}
+			}
+		</script>
+</div>
+	
+<div id="pilot_briefing">
+	<div id="briefing_panel"></div>
+	<div class="briefing_slide_container">
+		<div class="briefing_slider">
+			<div class="briefing_MiG-23"></div>
+			<div class="briefing_F-14B"></div>
+			<div class="briefing_AJ-37"></div>
+		</div>
+	</div>
+</div>
+
+<div class="hangar_top_bg"></div>
+
+<div class="hangar_slide">
+	<div id="hangar_cover"></div>
+	<div id="hangar_slide_container">
+	
+		<div class="hangar_MiG-23"></div>
+		<div class="hangar_F-14B"></div>
+		<div class="hangar_AJ-37"></div>
+		
+	</div>
+</div>
+
+</div>
+
+</body>
+</html>

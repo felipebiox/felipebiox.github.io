@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+<title>Testdrive</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="testdrive.css">
+<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="test_container">
+<div id="F-14B"><div class="F-14B_img"></div></div>
+
+  
+<a id="F-14B_L" href="#"></a>
+		  
+		  <script>
+			$( "#F-14B_L" ).click(function() {
+			  $( "#F-14B" ).animate({
+				left: "-=180"
+			  }, 1000 );
+			});
+			$( "#F-14B_L" ).click(function() {
+			  $( ".F-14B_img" ).animate({
+			    left: "-100%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "-200%"
+			  }, 0 ).delay( 800 ).animate({
+			    left: "-100%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "0"
+			  }, 0 );
+			});
+		  </script>
+		  
+<a id="F-14B_R" href="#"></a>
+		  
+		  <script>
+			$( "#F-14B_R" ).click(function() {
+			  $( "#F-14B" ).animate({
+				left: "+=180"
+			  }, 1000 );
+			});
+			$( "#F-14B_R" ).click(function() {
+			  $( ".F-14B_img" ).animate({
+			    left: "-300%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "-400%"
+			  }, 0 ).delay( 800 ).animate({
+			    left: "-300%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "0"
+			  }, 0 );
+			});
+		  </script>
+		  
+<a id="F-14B_U" href="#"></a>
+		  
+		  <script>
+			$( "#F-14B_U" ).click(function() {
+			  $( "#F-14B" ).animate({
+				bottom: "+=150"
+			  }, 1000 );
+			});
+			$( "#F-14B_U" ).click(function() {
+			  $( ".F-14B_img" ).animate({
+			    left: "-500%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "-600%"
+			  }, 0 ).delay( 800 ).animate({
+			    left: "-500%"
+			  }, 0 ).delay( 100 ).animate({
+			    left: "0"
+			  }, 0 );
+			});
+		  </script>
+		  
+<a id="F-14B_D" href="#"></a>
+		  
+		  <script>
+			$( "#F-14B_D" ).click(function() {
+			  $( "#F-14B" ).animate({
+				bottom: "-=100"
+			  }, 1000 );
+			});
+		  </script>
+</div>
+</body>
+</html>
