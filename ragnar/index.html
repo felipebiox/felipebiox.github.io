@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+
+<title>Ragnar - Inicial</title>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="ragnar.css">
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="ragnar_form">
+		<h1>Cálculo do número de operários em obras com limite de prazo para conclusão.</h1>
+		<form>
+			<div class="section"><span>1</span>Custo total da mão-de-obra com encargos sociais?</div>
+			<div class="inner-wrap">
+				<label><input type="text" name="field1" /></label>
+			</div>
+
+			<div class="section"><span>2</span>Prazo de execução em dias corridos?</div>
+			<div class="inner-wrap">
+				<label><input type="text" name="field2" /></label>
+			</div>
+
+			<div class="section"><span>3</span>Valor/hora dos qualificados (pedreiro, carpinteiro, encanador, etc)?</div>
+				<div class="inner-wrap">
+				<label><input type="text" name="field3" /></label>
+			</div>
+			
+			<div class="section"><span>4</span>Valor/hora dos serventes?</div>
+				<div class="inner-wrap">
+				<label><input type="text" name="field4" /></label>
+			</div>
+			
+			<div class="section"><span>5</span>Número de horas trabalhadas por semana?</div>
+				<div class="inner-wrap">
+				<label><input type="text" name="field5" /></label>
+			</div>
+			
+			<div class="button-section">
+				<a id="calcular" href="#" onclick="calcular()">Calcular</a>
+				<div class="resp_container"><label>Nº de Operários:</label>
+				<span class="resposta">
+				Resposta 
+				</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+		
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="ie10-viewport-bug-workaround.js"></script>
+		
+</body>
+</html>
